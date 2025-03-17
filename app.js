@@ -13,5 +13,15 @@ function agregarAmigo (){
     inputAmigo.value = ""; // Limpiar campo de texto
     inputAmigo.focus(); //limpia campo de texto luego de añadir amigo a la lista
     renderizarAmigos();
+}
 
+function renderizarAmigos(){
+    let listaAmigos = document.getElementById("listaAmigos");
+    listaAmigos.innerHTML = ""; // limpiar lista de amigos
+
+    for(let i = 0; i < amigo.length; i++){
+        let item = document.createElement("li");
+        item.textContent = amigo[i];
+        listaAmigos.appendChild(item)
+;    }
 }
