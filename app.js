@@ -1,9 +1,9 @@
-// El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
-et amigo = [];
+//Challenged amigo secreto
+let amigo = [];
 
 function agregarAmigo (){
     let inputAmigo = document.getElementById("amigo") //Para obtener lo digitado en el campo de texto
-    let nombreAmigo = inputAmigo.value; // añadir amigo a la lista
+    let nombreAmigo = inputAmigo.value; // añadir
 
     if(!nombreAmigo){
         alert("Debes ingresar un nombre");// mensaje en caso de no ingresar valor en campo de texto
@@ -13,8 +13,8 @@ function agregarAmigo (){
     inputAmigo.value = ""; // Limpiar campo de texto
     inputAmigo.focus(); //limpia campo de texto luego de añadir amigo a la lista
     renderizarAmigos();
-}
 
+}
 function renderizarAmigos(){
     let listaAmigos = document.getElementById("listaAmigos");
     listaAmigos.innerHTML = ""; // limpiar lista de amigos
@@ -22,15 +22,15 @@ function renderizarAmigos(){
     for(let i = 0; i < amigo.length; i++){
         let item = document.createElement("li");
         item.textContent = amigo[i];
-        listaAmigos.appendChild(item);}
+        listaAmigos.appendChild(item)
+;    }
 }
-
 function sortearAmigo(){
     if(amigo.length === 0){
         alert ("No hay amigos para sortear");
         return;
     }
-        let amigoSorteado = amigo[Math.floor(Math.random() * amigo.length)];
+        let amigoSorteado = amigo[Math.floor(Math.random() * amigo.length)]
         let resultado = document.getElementById("resultado");
         resultado.innerHTML = `El amigo ganador es ${amigoSorteado}`;
 
